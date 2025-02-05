@@ -36,9 +36,13 @@ def get_input_data():
         result = input(f"Enter result {i + 1} (C P J): ").split()
         C, P, J = map(int, result)
         
-        # We don't have labels from the user directly, so let's default them as "remain" for now
-        # (We can modify this later to handle dynamic labels or remove this)
-        label = 1  # You could change this or add logic for actual labeling
+        # Manually assign labels for testing
+        # Example of manually labeling: alternate between Remain and Filtered
+        if i % 2 == 0:  # Just an example: alternate labeling
+            label = 1  # Remain
+        else:
+            label = 0  # Filtered
+        
         data.append((C, P, J, label))
     
     return data
