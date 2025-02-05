@@ -58,43 +58,50 @@ Make sure you have the following installed:
    Navigate to your project directory and run the following command to create a new virtual environment:
    ```bash
    python3 -m venv venv
+   ```
    
 2. **Activate the virtual environment**:
     On macOS/Linux:
-    ``bash
+    ```bash
     source venv/bin/activate
+    ```
     
     On Windows:
-    ``bash
+    ```bash
     venv\Scripts\activate
+    ```
 
 3. **Install the required dependencies**:
     Once the virtual environment is activated, install the necessary libraries by running:
-    ``bash
+    ```bash
     pip install -r requirements.txt
+    ```
 
     requirements.txt:
-    ``bash
+    ```bash
     numpy
     scikit-learn
+    ```
 
 ---
 
 ## **How to Run**
 
 1. **Clone the repository**:
-    ``bash
+    ```bash
     git clone https://github.com/SergeiVorobev/ml-dominance-filter.git
     cd ml-dominance-filter
+    ```
 
 2. **Set up the virtual environment and activate it (as described above)**.
 
 3. **Run the script**:
-    ``bash
+    ```bash
     python dominance_filter_ml.py
+    ```
 
 4. **Input the results when prompted. For example**:
-    ``bash
+    ```bash
     Enter the number of results: 5
     Enter the results in the format: C P J (space-separated)
     300 2 10
@@ -102,12 +109,14 @@ Make sure you have the following installed:
     4 2 10
     200 1 1
     200 1 11
+    ```
 
 5. **View the output**:
     ``bash
     Accuracy: 1.00
     Predictions (1 = Remain, 0 = Filtered): [1 0 1 0 1]
     Remaining results: 3
+    ```
 
 ---
 
@@ -117,7 +126,7 @@ Make sure you have the following installed:
     The labeled dataset (example data) is used to train a Random Forest Classifier.
     Each result is represented as (C, P, J) with a label (1 for remain, 0 for filtered).
     
-1. **Prediction**:
+2. **Prediction**:
     The model predicts the label for each result in the input set.
     The number of 1s (remain) is displayed as the output.
 
