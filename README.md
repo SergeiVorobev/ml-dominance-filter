@@ -112,7 +112,7 @@ Make sure you have the following installed:
     ```
 
 5. **View the output**:
-    ``bash
+    ```bash
     Accuracy: 1.00
     Predictions (1 = Remain, 0 = Filtered): [1 0 1 0 1]
     Remaining results: 3
