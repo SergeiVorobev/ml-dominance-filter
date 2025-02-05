@@ -6,15 +6,15 @@ def train_and_predict(data):
     Train a machine learning model to classify results as 'remain' or 'filtered'.
     """
     # Separate the input (C, P, J) and the labels (1 = Remain, 0 = Filtered)
-    X_train = np.array([x[:3] for x in data])  # Features (C, P, J)
+    x_train = np.array([x[:3] for x in data])  # Features (C, P, J)
     y_train = np.array([x[3] for x in data])  # Labels (1 = Remain, 0 = Filtered)
 
     # Train the RandomForest model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
-    model.fit(X_train, y_train)
+    model.fit(x_train, y_train)
 
     # Predict on the training data itself for testing
-    y_pred = model.predict(X_train)
+    y_pred = model.predict(x_train)
     accuracy = np.mean(y_pred == y_train)
 
     print(f"Accuracy: {accuracy:.2f}")
